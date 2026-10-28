@@ -1,0 +1,140 @@
+:root {
+  --color-text: #222222;
+  --color-text-secondary: #717171;
+  --color-text-disabled: #b0b0b0;
+  --color-border: #dddddd;
+  --color-border-strong: #b0b0b0;
+  --color-divider: #ebebeb;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f7f7f7;
+  --color-surface-hover: #f2f2f2;
+  --color-surface-pressed: #ebebeb;
+  --color-brand: #ff385c;
+
+  --gradient-reserve: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
+  --gradient-reserve-hover: linear-gradient(to right, #d71b5f 0%, #c31a5b 50%, #bd0563 100%);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+  --shadow-card: 0 6px 16px rgb(0 0 0 / 0.12);
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+
+  --page-width: 1120px;
+  --page-gutter: 80px;
+  --section-nav-height: 67px;
+}
+
+@media (max-width: 1127px) {
+  :root {
+    --page-gutter: 40px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 950px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family:
+    var(--font-cereal),
+    "Airbnb Cereal VF",
+    Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* Skip-link and section-jump targets take focus so Tab continues from there; a ring around a
+   whole section would only be noise. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

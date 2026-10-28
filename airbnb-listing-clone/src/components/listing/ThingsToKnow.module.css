@@ -1,0 +1,27 @@
+.groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.title {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.line {
+  margin-top: 8px;
+  line-height: 21px;
+}
+
+/* The first line sits a little further from the title than the lines sit from each other. */
+.title + .line {
+  margin-top: 14px;
+}
+
+.more {
+  margin-top: 8px;
+}

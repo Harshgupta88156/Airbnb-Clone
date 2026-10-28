@@ -1,0 +1,87 @@
+.bar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--color-surface);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.bar[data-visible] {
+  opacity: 1;
+  transform: none;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: calc(var(--page-width) + 2 * var(--page-gutter));
+  height: 66px;
+  margin: 0 auto;
+  padding: 0 var(--page-gutter);
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 8px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.tab[aria-current]::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 12px;
+  left: 8px;
+  height: 2px;
+  background: var(--color-text);
+}
+
+.booking {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.summary {
+  text-align: right;
+}
+
+.priceLine {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ratingLine {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.reserve {
+  height: 40px;
+  padding: 0 20px;
+}

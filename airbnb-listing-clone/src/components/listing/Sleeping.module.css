@@ -1,0 +1,29 @@
+.spaces {
+  display: grid;
+  grid-template-columns: repeat(2, 318px);
+  gap: 16px;
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-subtle);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.room {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.beds {
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,151 @@
+.layout {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 30px 24px;
+  border: 1px solid var(--color-divider);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.identity {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.portrait {
+  position: relative;
+}
+
+.avatar {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.verified {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  padding: 2px;
+  border-radius: 50%;
+  background: var(--color-surface);
+}
+
+.name {
+  margin-top: 12px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.role {
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.43;
+}
+
+.stats {
+  width: 100px;
+  padding-left: 20px;
+  border-left: 1px solid var(--color-divider);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px 0;
+}
+
+.stat + .stat {
+  border-top: 1px solid var(--color-divider);
+}
+
+.statValue {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.statLabel {
+  font-size: 12px;
+  line-height: 1.43;
+}
+
+.facts {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  line-height: 1.43;
+}
+
+.subheading {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.coHosts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 8px;
+  margin-top: 16px;
+}
+
+.coHost {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details {
+  margin-top: 30px;
+}
+
+.response {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.message {
+  display: block;
+  margin-top: 18px;
+  padding: 13px 24px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-hover);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
+  transition: background-color 150ms ease;
+}
+
+.message:hover {
+  background: var(--color-surface-pressed);
+}
+
+.payment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 30px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.43;
+}

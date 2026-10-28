@@ -1,0 +1,13 @@
+.reserve {
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-reserve);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Gradients can't transition, and the reference swaps them instantly too. */
+.reserve:hover {
+  background: var(--gradient-reserve-hover);
+}

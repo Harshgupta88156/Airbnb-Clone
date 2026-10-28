@@ -1,0 +1,21 @@
+/* Blocks in the left column are separated by a hairline and 32px of breathing room. */
+.block {
+  padding: 32px 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+/* Full-width sections under the booking area use 48px. */
+.wide {
+  padding: 48px 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.headingSpacing {
+  margin-bottom: 24px;
+}

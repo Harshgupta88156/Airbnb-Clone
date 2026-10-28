@@ -1,0 +1,137 @@
+.heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.subheading {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+}
+
+.months {
+  position: relative;
+  display: flex;
+  gap: 56px;
+  margin-top: 22px;
+}
+
+.month {
+  width: 298px;
+}
+
+.monthTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.43;
+  text-align: center;
+}
+
+.monthNav {
+  position: absolute;
+  top: -4.5px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background-color 150ms ease;
+}
+
+.monthNav:hover:not(:disabled) {
+  background: var(--color-surface-subtle);
+}
+
+.monthNav:disabled {
+  opacity: 0.2;
+}
+
+.monthNavPrevious {
+  left: 0;
+}
+
+.monthNavNext {
+  right: 0;
+}
+
+.grid {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.weekday {
+  height: 29px;
+  padding: 4px 0 7px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  vertical-align: top;
+}
+
+.cell {
+  padding: 0;
+}
+
+.cell[data-state="between"] {
+  background: var(--color-surface-hover);
+}
+
+.cell[data-state="start"] {
+  background: linear-gradient(to right, transparent 50%, var(--color-surface-hover) 50%);
+}
+
+.cell[data-state="end"] {
+  background: linear-gradient(to left, transparent 50%, var(--color-surface-hover) 50%);
+}
+
+.day {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.day:hover:not([aria-disabled]) {
+  box-shadow: inset 0 0 0 1.5px var(--color-text);
+}
+
+.cell[data-state="start"] .day,
+.cell[data-state="end"] .day,
+.cell[data-state="single"] .day {
+  background: var(--color-text);
+  color: #fff;
+}
+
+.day[aria-disabled] {
+  color: var(--color-border);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+  margin-top: 18px;
+}
+
+.keyboardHint {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 22px;
+}
+
+.clear {
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 20px;
+}

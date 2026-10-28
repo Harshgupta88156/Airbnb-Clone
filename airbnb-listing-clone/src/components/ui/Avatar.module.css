@@ -1,0 +1,34 @@
+.photo {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.initial {
+  display: grid;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.initial[data-tone="peach"] {
+  background: #f7ede2;
+  color: #c1852a;
+}
+
+.initial[data-tone="lavender"] {
+  background: #efeaf7;
+  color: #8b6fc4;
+}
+
+.initial[data-tone="rose"] {
+  background: #fde7ef;
+  color: #d4356e;
+}
+
+.initial[data-tone="sky"] {
+  background: #e7f0fd;
+  color: #3a6ecc;
+}

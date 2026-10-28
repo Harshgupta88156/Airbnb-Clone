@@ -1,0 +1,120 @@
+.place {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.43;
+}
+
+.map {
+  position: relative;
+  height: 480px;
+  margin-top: 24px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+/* Colours, the 115° coastline and the 90px street grid were sampled off the reference map. */
+.canvas {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, #acd3e6 34%, #e9f0e4 34%);
+}
+
+.canvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgb(180 178 170 / 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(180 178 170 / 0.25) 1px, transparent 1px);
+  background-position:
+    0 0,
+    0 -1px;
+  background-size: 90px 90px;
+}
+
+.park {
+  position: absolute;
+  border-radius: 50%;
+  background: #cfe3c8;
+  translate: -50% -50%;
+}
+
+.parkNorth {
+  top: 40%;
+  left: 30%;
+  width: 100px;
+  height: 100px;
+}
+
+.parkSouth {
+  top: 60%;
+  left: 70%;
+  width: 134px;
+  height: 134px;
+}
+
+.pin {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-text);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.25);
+  color: #fff;
+  translate: -50% -50%;
+}
+
+.search,
+.zoomButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-surface);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.18);
+  color: var(--color-text);
+}
+
+.search {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 50%;
+}
+
+.zoom {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zoomButton {
+  border-radius: var(--radius-sm);
+}
+
+.note {
+  margin-top: 18px;
+}
+
+.subheading {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.neighbourhood {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.more {
+  margin-top: 18px;
+}

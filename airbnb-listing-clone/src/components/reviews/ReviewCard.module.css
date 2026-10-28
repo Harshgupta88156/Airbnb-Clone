@@ -1,0 +1,48 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.meta {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.43;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6.5px;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.43;
+}
+
+.text {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.text[data-clamped] {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.toggle {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.3;
+}

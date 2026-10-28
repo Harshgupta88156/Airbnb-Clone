@@ -1,0 +1,115 @@
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: var(--color-surface);
+  outline: none;
+  opacity: 1;
+  transition: opacity 250ms ease;
+}
+
+.viewer[data-exiting] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@starting-style {
+  .viewer {
+    opacity: 0;
+  }
+}
+
+.bar {
+  position: absolute;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px 0 16px;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.barEnd {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.barButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 160ms ease;
+}
+
+.barButton:hover {
+  background: var(--color-surface-hover);
+}
+
+/* Flex rather than grid: percentage max sizes on the image need the stage's definite size. */
+.stage {
+  position: absolute;
+  inset: 88px 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  pointer-events: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border: 1px solid rgb(0 0 0 / 0.3);
+  border-radius: 50%;
+  background: var(--color-surface);
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+}
+
+.previous {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}

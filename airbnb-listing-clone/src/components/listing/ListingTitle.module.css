@@ -1,0 +1,40 @@
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 0 18px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  gap: 3px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  transition: background-color 150ms ease;
+}
+
+.action span {
+  text-decoration: underline;
+}
+
+.action:hover {
+  background: var(--color-surface-hover);
+}

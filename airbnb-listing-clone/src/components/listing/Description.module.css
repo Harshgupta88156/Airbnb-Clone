@@ -1,0 +1,29 @@
+.description {
+  padding-top: 26px;
+}
+
+.notice {
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-subtle);
+}
+
+.body {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  /* Four lines plus the extra height emoji add to a line box; the last line fades out
+     instead of ending in an ellipsis. */
+  max-height: 6.2em;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
+}
+
+.body[data-expanded] {
+  max-height: none;
+  mask-image: none;
+}
+
+.toggle {
+  margin-top: 14px;
+}

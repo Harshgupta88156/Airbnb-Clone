@@ -1,0 +1,30 @@
+.page {
+  max-width: calc(var(--page-width) + 2 * var(--page-gutter));
+  margin: 0 auto;
+  padding: 0 var(--page-gutter);
+}
+
+/* 652 + 96 + 372 at the reference width; the booking column keeps its size as the page narrows. */
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 372px;
+  gap: 96px;
+  margin-top: 48px;
+}
+
+.skipLink {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 3000;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-text);
+  color: #fff;
+  font-weight: 500;
+  transform: translateY(-200%);
+}
+
+.skipLink:focus-visible {
+  transform: none;
+}

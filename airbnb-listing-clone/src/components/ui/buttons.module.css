@@ -1,0 +1,53 @@
+/* Standalone buttons are block-level flex so the surrounding line box can't add a few pixels. */
+.outlined {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 23px;
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  transition: background-color 150ms ease;
+}
+
+.outlined:hover {
+  background: var(--color-surface-subtle);
+}
+
+.link {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: auto;
+}
+
+.chevronLink {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.chevronLink > span {
+  text-decoration: underline;
+}
+
+.subtle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-subtle);
+  font-weight: 500;
+  transition: background-color 150ms ease;
+}
+
+.subtle:hover {
+  background: var(--color-surface-hover);
+}
